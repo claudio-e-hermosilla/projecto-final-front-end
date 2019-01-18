@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html ng-app= "ventas">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CLAVISTEL</title>
+    <title>VENTAS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="2.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    
+    <script src="2.js"></script> 
 </head>
 <body>
+    <form action="/action_page.php" onsubmit="return sumartotal();">
     <div id="div2" class="jumbotron" >
             <div class="media">
                     <div class="media-left">
@@ -30,10 +31,10 @@
   <table class="table table-bordered">
     <thead>
       <tr>
-        <th>Productos</th>
-        <th>Cantidad</th>
-        <th>Precio</th>
-        <th>Total</th>
+        <th id="producto">Productos</th>
+        <th id="cantidad">Cantidad</th>
+        <th id="precio">Precio</th>
+        <th id="total">Total</th>
       </tr>
     </thead>
     <tbody>
@@ -41,22 +42,56 @@
         <td>Samsung J7</td>
         <td>4</td>
         <td>184.000</td>
-        <td>184.000
-            <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+        <td id="total1">
+            <a href="#"><span id="eliminarProducto" class="glyphicon glyphicon-remove"></span></a>
         </td>
       </tr>
       <tr>
         <td>Huawei Y7</td>
         <td>3</td>
         <td>100.000</td>
-        <td>100.000
+        <td id="total2" >
             <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
         </td>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tfoot>
+          <tr>
+            <td colspan="3">TOTAL:</td>
+            <td id="TOTALTOTAL"> </td>
+        </tr>
+        </tfoot>
       </tr>
-    </tbody>
+ </tbody>
   </table> 
+  <div style="width: 330px; margin: 0 auto">
+      <div class="container">
+          <button type="button" class="btn btn-success">PAGAR</button>
+          <button type="button" class="btn btn-danger">CANCELAR</button>
+        </div>
+        </div>
+        
+   
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+
 </body>
 </html>
