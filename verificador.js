@@ -19,9 +19,17 @@ function vereficarcampos()
 var app = angular.module("app1",[])
 app.controller("controlador1",function($scope,$http)
 {
+    var usuario =
+    {
+        "nombre":$scope.usuario,
+        "password":$scope.contrasena,
+        "rut":$scope.rutificador,
+        "telefono":$scope.celular,
+        "correo":$scope.correo,
+    };
     $scope.inicio = function()
     {
-        $http.gett("http://localhost:8080/UsuarioControler")
+        $http.post("http://localhost:8080/usuarios/agregarUsuario",usuario)
         .then(function(data)
         {
             console.log(data)
@@ -29,14 +37,5 @@ app.controller("controlador1",function($scope,$http)
                 $scope.usuario = data.data;
             }
         });
-        var usuario =
-        {
-            "nombre":$scope.usuario,
-            "password":$scope.contrasena,
-            "rut":$scope.rutificador,
-            "telefono":$scope.celular,
-            "correo":$scope.correo,
-        };
-        $http.post("http://localhost:8080/UsuarioControler",usuario)
     }
 });
