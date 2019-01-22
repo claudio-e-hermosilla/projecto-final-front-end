@@ -17,8 +17,12 @@ function vereficarcampos()
     }
 }
 var app = angular.module("app1",[])
-app.controller("controlador1",function($scope,$http)
+app.controller("controlador1",function($scope,$http,$sce)
 {
+    $scope.trustScr = function(src)
+    {
+        return $sce.trustAsResourceUrl(src);
+    }
     var usuario =
     {
         "correo":$scope.correo,
@@ -29,7 +33,7 @@ app.controller("controlador1",function($scope,$http)
     };
     $scope.inicio = function()
     {
-        $http.post("http://localhost:8080/usuarios/agregarUsuarioVendedor" , usuario) //coso
+        $http.post($scope.trustScr("http://localhost:8080/usuarios/agregarUsuarioVendedor"),usuario) //coso
         .then(function(data)
         {
             console.log(data)
