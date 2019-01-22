@@ -24,16 +24,7 @@ app.controller("controlador1",function($scope,$http)
         "correo":$scope.correo,
         "nombre":$scope.usuario,
         "password":$scope.contrasena,
-        "rol":1,
         "rut":$scope.rutificador,
-
-        "sucursal":{
-            "comuna":"",
-            "direccion":"",
-            "idsucursal":0,
-            "nombre":"",
-            "ubicacion":"",
-        },
         "telefono":$scope.celular,
     };
     $scope.inicio = function()
