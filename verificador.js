@@ -38,7 +38,7 @@ app.controller("controlador1",function($scope,$http)
     };
     $scope.inicio = function()
     {
-        $http.post("http://localhost:8080/usuarios/agregarUsuarioVendedor",usuario)
+        $http.post("http://localhost:8080/usuarios/agregarUsuarioVendedor" , usuario) //coso
         .then(function(data)
         {
             console.log(data)
