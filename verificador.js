@@ -21,15 +21,24 @@ app.controller("controlador1",function($scope,$http)
 {
     var usuario =
     {
+        "correo":$scope.correo,
         "nombre":$scope.usuario,
         "password":$scope.contrasena,
+        "rol":1,
         "rut":$scope.rutificador,
+
+        "sucursal":{
+            "comuna":"",
+            "direccion":"",
+            "idsucursal":0,
+            "nombre":"",
+            "ubicacion":"",
+        },
         "telefono":$scope.celular,
-        "correo":$scope.correo,
     };
     $scope.inicio = function()
     {
-        $http.post("http://localhost:8080/usuarios/agregarUsuario",usuario)
+        $http.post("http://localhost:8080/usuarios/agregarUsuarioVendedor",usuario)
         .then(function(data)
         {
             console.log(data)
