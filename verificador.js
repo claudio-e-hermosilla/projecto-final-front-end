@@ -16,3 +16,27 @@ function vereficarcampos()
         return false;
     }
 }
+var app = angular.module("app1",[])
+app.controller("controlador1",function($scope,$http)
+{
+    $scope.inicio = function()
+    {
+        $http.gett("http://localhost:8080/UsuarioControler")
+        .then(function(data)
+        {
+            console.log(data)
+            {
+                $scope.usuario = data.data;
+            }
+        });
+        var usuario =
+        {
+            "nombre":$scope.usuario,
+            "password":$scope.contrasena,
+            "rut":$scope.rutificador,
+            "telefono":$scope.celular,
+            "correo":$scope.correo,
+        };
+        $http.post("http://localhost:8080/UsuarioControler",usuario)
+    }
+});
