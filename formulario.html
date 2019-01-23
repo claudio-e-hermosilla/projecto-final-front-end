@@ -11,7 +11,7 @@
         <script src="verificador.js" type = "text/javascript"></script>
     </head>
     <body ng-controller="controlador1">
-      {{"hola "}}
+      {{"hola " + usuario1 }}
       <!--seccion Login-->
       <!--seccion formulario-->
       <section id="formulario">
@@ -29,27 +29,27 @@
                       <div class="form-group">
                           <div class="row">                             
                             <div class="col-lg-6" >
-                              <input class="form-control" id="user" placeholder="Usuario" pattern="[A-Z a-z]{8,40}" required ng-model="usuario" >
+                              <input class="form-control" type="text" id="user" placeholder="Usuario" pattern="[A-Z a-z]{8,40}" ng-model="usuario1" >
                             </div>
                             <div class="col-lg-6">
-                              <input class="form-control" type="password" id="password" placeholder="Contraseña" required ng-model="contrasena" >
+                              <input class="form-control" type="text" type="password" id="password" placeholder="Contraseña" ng-model="contrasena" >
                             </div>                       
                           </div>          
                        </div>
                        <div class="form-group">
                           <div class="row">                             
                             <div class="col-lg-6">
-                              <input class="form-control" id="rut" placeholder="11.111.111-1" ng-pattern = "/^[0-9]{1,2}.[0-9]{3}.[0-9]{3}-[0-9Kk]{1}$/" ng-model="rutificador">
+                              <input class="form-control" type="text" id="rut" placeholder="11.111.111-1" ng-pattern = "/^[0-9]{1,2}.[0-9]{3}.[0-9]{3}-[0-9Kk]{1}$/" ng-model="rutificador">
                             </div>
                             <div class="col-lg-6">
-                              <input class="form-control" id="fono" placeholder="ej:9 8765 4321" pattern="[0-9]{9}" required ng-model="celular">
+                              <input class="form-control" type="text" id="fono" placeholder="ej:9 8765 4321" pattern="[0-9]{9}" required ng-model="celular">
                             </div>                       
                           </div>          
                        </div>
                       <div class="form-group">
                         <input class="form-control" type="email" id="email" placeholder="ejemplo@ejem.com" required ng-model="correo">
                       </div>
-                      <button type="submit" class="btn btn-danger btn-register3" onclick="return vereficarcampos()" ng-click="inicio()">Registrar</button>
+                      <button type="submit" class="btn btn-danger btn-register3" ng-click="inicio()">Registrar</button>
                       <button type="reset" class="btn btn-primary btn-register3">limpiar</button>
                   </form>
               </div>

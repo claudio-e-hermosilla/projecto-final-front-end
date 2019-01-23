@@ -1,4 +1,3 @@
-
 var app = angular.module("app1",[])
 app.controller("controlador1",function($scope,$http,$sce)
 {
@@ -6,33 +5,32 @@ app.controller("controlador1",function($scope,$http,$sce)
     {
         return $sce.trustAsResourceUrl(src);
     }
-
     var header_config = {
         headers: {
             'Content-Type' : 'application/json'
         }
     };
-
-    var form_data =
-    ({
-        "correo":$scope.correo,
-        "nombre":$scope.usuario,
-        "password":$scope.contrasena,
-        "rut":$scope.rutificador,
-        "telefono":$scope.celular
-    });
     $scope.inicio = function()
     {
+        var usuario =
+        ({
+            correo:$scope.correo,
+            nombre:$scope.usuario1,
+            password:$scope.contrasena,
+            rut:$scope.rutificador,
+            telefono:$scope.celular
+        });
         $http({
-            method : 'POST',
+            method :'PUT',
             url : $scope.trustScr("http://localhost:8080/usuarios/agregarUsuarioVendedor"),
-            data : JSON.stringify(form_data),
+            data : JSON.stringify(usuario),
             config : header_config
-        }).then(function(data){
-          console.log(data)       
-            },function(error){
+        }).then(function(data)
+        {
+          console.log(data)
+            },function(error)
+            {
                 console.log(error)
-            });
-        
+            });        
         }
-});
+}); 
