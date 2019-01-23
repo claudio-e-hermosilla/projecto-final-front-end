@@ -1,0 +1,36 @@
+#div2{
+    padding: 2%;
+   background-color: rgb(175, 183, 255);
+}
+#div1{
+    color: black
+}
+#posB {
+    margin-left: 2%
+}#posB {
+    margin-right: 30%
+}
+#posB{
+    color:black
+}
+#carga{
+    margin-left: 10%
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+  }
+ 
+  #cargaboton{
+      margin-left: 30%;
+      color: black;
+  }
+  #formatopdf {
+      margin-left:30%
+  }
+  #panelbusqueda{
+      margin-top: 20%;
+      margin-left: 2%;
+      width: 25%;
+      height: 20%
+  }
