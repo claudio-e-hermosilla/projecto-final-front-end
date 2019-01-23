@@ -15,11 +15,11 @@ app.controller("controlador1",function($scope,$http,$sce)
 
     var form_data =
     ({
-        correo:$scope.correo,
-        nombre:$scope.usuario,
-        password:$scope.contrasena,
-        rut:$scope.rutificador,
-        telefono:$scope.celular
+        "correo":$scope.correo,
+        "nombre":$scope.usuario,
+        "password":$scope.contrasena,
+        "rut":$scope.rutificador,
+        "telefono":$scope.celular
     });
     $scope.inicio = function()
     {
