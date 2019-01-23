@@ -1,65 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app reportes>
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="3.js"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="3.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="main.js"></script>
 </head>
 <body>
+        <form action="/action_page.php" ();>
+    <div id="div2" class="jumbotron" >
+            <div class="media">
+                    <div class="media-left">
+                      <img src="user.png" class="media-object" style="width:90px">
+                    </div>
+                    <div id="div1" class="media-body">
+                      <h4 class="media-heading">Nombre: Juanita Perez</h4>
+                      <h4 class="media-heading">ID: 00000000</h4>
+                      <h4 class="media-heading">Rol: Vendedor</h4>
+                      <h4 class="media-heading">Sucursal: Santiago</h4>
+                    </div>
+                    <div class="media-right">
+                            <h1>REPORTES</h1>
+                          </div>
+                  </div>
+                </div>
 
-<div class="container">
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Large Modal</button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">AGREGAR USUARIO</h4>
+<div id="divRep" class="container">
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h3>Generar Reportes</h3></div>
+      <div class="panel-body">
+            <div class= "media-left">
+        <div id="BOTONES" class="container">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Seleccione Tipo de Reporte <span class="caret">
+                      </span></button>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Inventario</a></li>
+                        <li><a href="#">Vendedor</a></li>
+                        <li><a href="#">Sucursal</a></li>
+                      </ul>
+                    </div>
+                </div>
+<div id="BOTONES" class="container">
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Seleccione Formato <span class="caret">
+            </span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">TXT</a></li>
+                </ul>
+                
+                </div>
+             </div>
+             <form name="formulario" method="post" action="http://pagina.com/send.php">
+                <!-- Campo de entrada de fecha -->
+                Selecciona la fecha deseada:
+                <input type="date" name="fecha" min="2018-03-25"
+                                                max="2019-01-30" step="2">
         </div>
-        <div class="modal-body">
-                <div class="container">
-                        <div class="form-group row">
-                          <div class="col-xs-2">
-                            <label for="ex1">Nombre</label>
-                            <input class="form-control" id="ex1" type="text">
-                          </div>
-                          <div class="col-xs-3">
-                            <label for="ex2">Apellido Paterno</label>
-                            <input class="form-control" id="ex2" type="text">
-                          </div>
-                          <br></br>
-                          <div class="col-xs-3">
-                            <label for="ex2">Apellido Materno</label>
-                            <input class="form-control" id="ex2" type="text">
-                          </div>
-                          <div class="col-xs-3">
-                            <label for="ex2">R.U.N</label>
-                            <input class="form-control" id="ex2" type="text">
-                          </div>
-                          <div class="col-xs-3">
-                            <label for="ex2">E-Mail</label>
-                            <input class="form-control" id="ex2" type="text">
-                          </div>
-                          <div class="col-xs-3">
-                            <label for="ex2">Telefono</label>
-                            <input class="form-control" id="ex2" type="text">
-                          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </body>
 </html>
-
