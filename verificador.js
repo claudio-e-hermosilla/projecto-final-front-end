@@ -17,7 +17,7 @@ app.controller("controlador1",function($scope,$http,$sce)
             correo:$scope.correo,
             nombre:$scope.usuario1,
             password:$scope.contrasena,
-            rut:$scope.rutificador,
+            rut:$scope.ruti,
             telefono:$scope.celular
         });
         $http({
