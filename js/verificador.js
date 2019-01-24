@@ -15,8 +15,7 @@ app.controller("controlador1",function($scope,$http,$sce)
         var usuario =
         ({
             correo:$scope.correo,
-            nombre:$scope.usuario1,
-            password:$scope.contrasena,
+            nombre:$scope.usuario1, 
             rut:$scope.ruti,
             telefono:$scope.celular
         });
