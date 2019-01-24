@@ -16,11 +16,13 @@ app.controller("controlador1",function($scope,$http,$sce)
         ({
             correo:$scope.correo,
             nombre:$scope.usuario1, 
+            password:$scope.contrasena,
             rut:$scope.ruti,
             telefono:$scope.celular
         });
+        console.log(JSON.stringify(usuario));
         $http({
-            method :'PUT',
+            method :'POST',
             url : $scope.trustScr("http://localhost:8080/usuarios/agregarUsuarioVendedor"),
             data : JSON.stringify(usuario),
             config : header_config
