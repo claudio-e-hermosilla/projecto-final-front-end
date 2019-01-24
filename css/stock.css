@@ -5,37 +5,34 @@
 #div1{
     color: black
 }
-#posB {
-    margin-left: 2%;
-    margin-right: 2%
- }
-#posB{
-    color:black
-}
-#carga{
-    margin-left: 10%
-}
-.btn-file {
-    position: relative;
-    overflow: hidden;
-  }
- 
-  #cargaboton{
-      margin-left: 30%;
-      color: black;
-  }
-  #formatopdf {
-      margin-left:30%
-  }
-  #panelbusqueda{
-      margin-left: 2%;
-      margin-right: 2%;
-      width: 25%;
-      height: 20%
-  }
-  #inputfile {
-      margin-left: 35%
-  }
 #tabla{
-    width: 250%
+    width: 265%
 }
+#cajita{
+    width: 50%;
+    height:50%;
+}
+#botoncarga{
+    color: black;
+}
+#imgcargarproducto{
+    width: 100%;
+    height: 100%;
+}
+#inputfile {
+    margin-left: 1%
+}
+#excel{
+    margin-left: 5%
+}
+#panelbusqueda{
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 25%;
+    height: 20%
+}
+
+
+
+
+ 
