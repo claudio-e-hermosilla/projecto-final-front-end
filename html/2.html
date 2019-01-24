@@ -44,14 +44,14 @@
         <td>Samsung J7</td>
         <td id="cantidad2">4</td>
         <td id="valor2">184000</td>
-        <td id="total2"><a href="#"><span class="glyphicon glyphicon-remove"></span></a></td>
+        <td id="total2"><a href="#"><span class="glyphicon glyphicon-remove" id="eliminar"></span></a></td>
       </tr>
       <tr>
         <td>2</td>
         <td>Huawei Y7</td>
         <td id="cantidad1">3</td>
         <td id="valor1">100000</td>
-        <td id="total1" ><a href="#"><span class="glyphicon glyphicon-remove"></span></a></td>
+        <td id="total1" ><a href="#"><span class="glyphicon glyphicon-remove" onclick="eliminar()"></span></a></td>
         <tr>
           <td> </td>
             <td> </td>
@@ -95,7 +95,7 @@
           <button type="button" class="btn btn-danger" onclick="multiplicar()">CANCELAR</button>
         </div>
         </div>
-            <div id="div4" class="jumbotron"></div>
+            <div id="div4" class="jumbotron" id="volver"></div>
             <div align="center">
               <input type="button"class="btn btn-primary"  value="VOLVER ATRÁS" name="Back2" onclick="history.back()" />
               </div>
