@@ -29,7 +29,6 @@
                   </div>
                   </div>
 <div class="row">
-<div class="col-sm-6" style="background-color:white;">
   <div id="divRep" class="container">
     <div class="panel-group">
       <div class="panel panel-default">
@@ -38,40 +37,38 @@
               
           <div id="BOTONES" class="container"id="seleccion">
                   <div class="dropdown">
-                      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" >Seleccione Tipo de Reporte <span class="caret">
+                      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="position: fixed; top: 200px; right: 900px">Seleccione Tipo de Reporte <span class="caret">
                         </span></button>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" >
                           <li><a href="#">Inventario</a></li>
                           <li><a href="#">Vendedor</a></li>
                           <li><a href="#">Sucursal</a></li>
                         </ul>
-                      </div>
                   </div>
   <div id="BOTONES" class="container">
       <div class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Seleccione Formato <span class="caret">
+          <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="position: fixed; top: 250px; right: 950px">Seleccione Formato <span class="caret">
               </span></button>
                   <ul class="dropdown-menu">
                       <li><a href="#">Exel</a></li>
                   </ul>
                   </div>
-               <form name="formulario" method="post" action="http://pagina.com/send.php">
+                  </div>
+                  <div style="position: fixed; top: 300px; right: 1050px">
+               <form name="formulario" method="post"  action="http://pagina.com/send.php" >
                   <!-- Campo de entrada de fecha -->
-                  Selecciona la fecha deseada:
+                  Selecciona la fecha deseada:</div>
                   <input type="date" name="fecha" min="2018-03-25"
-                                                  max="2019-01-30" step="2">
+                                                  max="2019-01-30" step="2" style="position: fixed; top: 300px; right: 900px"> 
                </div>
-     
- <div class="col-sm-6" style="background-color:white"><img src="..\imagenes\grafico2.png" id="imgGrafico"></div>
-</div>
-</div>
 
-</div>
-</div>   
+               <img src="..\imagenes\grafico2.png" id="imgGrafico" style="position: fixed; top: 130px; right: 250px;" alt="" /></div>
+
 <div class="container" id="botonesfinales">
         <button type="button" class="btn btn-info">Generar</button>
         <button type="button" class="btn btn-warning">Imprimir</button>
           </div>   
+
         <div id="div4" class="jumbotron" id="volver"></div>
         <div align="center">
           <input type="button"class="btn btn-primary"  value="VOLVER ATRÁS" name="Back2" onclick="history.back()" />
