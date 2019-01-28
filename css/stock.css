@@ -3,17 +3,19 @@
    background-color: rgb(175, 183, 255);
 }
 #div1{
-    color: black
+    color: black;
 }
 #tabla{
     width: 265%
 }
 #cajita{
+    margin-left: -1%;
     width: 50%;
     height:50%;
 }
 #botoncarga{
     color: black;
+    
 }
 #imgcargarproducto{
     width: 100%;
@@ -25,12 +27,27 @@
 #excel{
     margin-left: 5%
 }
-#panelbusqueda{
-    margin-left: 2%;
-    margin-right: 2%;
-    width: 25%;
-    height: 20%
+
+#buscar{
+    margin-left: 1%
 }
+#barradebusqueda {
+    margin-left: 2%;
+    width: 95%
+}
+#filtro {
+    margin-left: 2%;
+    width: 95%
+
+}
+#M{
+    margin-left: 3%;
+}
+#panel {
+    width: 100%
+}
+
+
 
 
 
