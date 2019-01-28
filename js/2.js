@@ -13,8 +13,8 @@ app.controller("controlador2",function($scope,$http,$sce){
         }
     };
 
-    $scope.borrar=function(){
-        $(document).on('click', '.borrar', function (event) {
+    $scope.eliminarFila=function(){
+        $(document).on('click', function (event) {
             event.preventDefault();
             $(this).closest('tr').remove();
         });
