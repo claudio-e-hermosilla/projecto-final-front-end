@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   
 </head>
-<body>   
+<body ng-controller="controlador2">   
     <div><br><br>
     </div>  
     <div class="form-group form-group-lg">
@@ -22,13 +22,13 @@
             <br>
           <div class="form-group">
             <label for="text">RUT:</label>
-            <input type="text" ng-pattern="[0-9]{1,2}.[0-9]{3}.[0-9]{3}-[0-9Kk]{1}" name="rut" class="form-control" id="RUT" placeholder="121231231"> 
+            <input type="text" ng-pattern="[0-9]{1,2}.[0-9]{3}.[0-9]{3}-[0-9Kk]{1}" name="rut" class="form-control" id="RUT" placeholder="121231231" ng-model="ruti"> 
           </div> 
           <div class="form-group">
             <label for="pwd">password:</label>
-            <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" ng-model="contra">
           </div>
-          <button type="submit" class="btn-enviar">enviar</button>
+          <button type="submit" class="btn-enviar" ng-click="enviar()">enviar</button>
         </form>
       </div>
     </center>
@@ -38,5 +38,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 </body>
 </html>
