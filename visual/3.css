@@ -6,11 +6,16 @@
     color: black
 }
 #divRep{
-    padding: 2%
+    padding: 6%
 }
 #BOTONES{
     padding: 3%
 }
-#botonesFinales{
-    margin-bottom: 7%
+#fecha{
+    margin-left: 3%
+}
+#graf {
+    margin-top: -40%;
+    margin-left:35%
+
 }
