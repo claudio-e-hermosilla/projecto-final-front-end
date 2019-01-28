@@ -1,51 +1,97 @@
 <!DOCTYPE html>
-<html ng-app= "LoginApp">
+<html ng-app reportes>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LOGIN</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>       
-    <link rel="stylesheet"  href="..\CSS\1.css" />
-    <script src="..\js\1.js" type="text/javascript"></script>
-
+    <title>Reportes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="..\CSS\3.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  
+    <script src="main.js"></script>
+
 </head>
-<body ng-controller="ctrlLogin">
-  {{"hola " + modelRUT}}
-    <div><br><br>
-    </div>  
-    <div class="form-group form-group-lg" >
-    <center>
-    <div id="div1" class="well well-lg">
-    <img src="..\imagenes\user.png" >
-        <form  name="formLogin" novalidate>
-            <br>
-            <!--Rut-->
-          <div class="form-group">
-            <label for="InputRUT">RUT:</label>
-            <input type="text" class="form-control" id="InputRUT" placeholder="12.123.123-1" ng-model="modelRUT" required value> 
-          </div> 
-          <!--Password-->
-          <div class="form-group">
-            <label for="InputPassword">Password</label>
-            <input type="password" class="form-control" id="inputPassword" placeholder="Enter password" ng-model="modelPass" required value>
-            <input type="checkbox" onchange="document.getElementById('inputPassword').type =this.checked ? 'text' : 'password'">Mostrar
-          </div>
-          <!--boton-->
-          <button type="submit" class="btn btn-primary btn-block" ng-click="iniciarSesion()">Entrar</button>
-          <div class="bg-warning" style="padding:20px;" ng-show ="mostrarError">
-              {{mensaje}}
-          </div>
-        </form>
+<body>
+  <form action="/action_page.php" ();>
+  <div id="div2" class="jumbotron" >
+  <div class="media">
+  <div class="media-left">
+    <img src="..\imagenes\user.png" class="media-object" style="width:90px">
+  </div>
+  <div id="div1" class="media-body">
+    <h4 class="media-heading">Nombre: Claudio Hermosilla</h4>
+    <h4 class="media-heading">ID: 19.583.197-1</h4>
+    <h4 class="media-heading">Rol: Administrador</h4>
+    <h4 class="media-heading">Sucursal: Providencia</h4>
+  </div>
+  <div class="media-right">
+    <h1>REPORTES</h1>
+  </div>
+  </div>
+  </div>
+<div id="divRep" class="container">
+<div class="panel-group">
+<div class="panel panel-default">
+<div class="panel-heading"><h3>Generar Reportes</h3></div>
+<div class="panel-body" id="divPanelBody">
+<div class= "media-left">
+<div id="BOTONES1" class="container">
+  <h4>Selecione tipo de reporte</h4>
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">--Seleccion-- <span class="caret">
+  </span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Inventario</a></li>
+    <li><a href="#">Vendedor</a></li>
+    <li><a href="#">Sucursal</a></li>
+  </ul>
+</div>
+</div>
+</div>
+<div id="fecha">
+<form name="formulario" method="post" >
+                <!-- Campo de entrada de fecha -->
+    Seleccione rango de fecha
+    <br>
+    Desde:
+    <br>
+<input type="date" name="fecha" min="2018-03-25"
+                                max="2019-01-30" step="2">
+    <br>
+    Hasta:
+    <br>
+<input type="date" name="fecha" min="2018-03-25"
+                                max="2019-01-30" step="2">
+</div>
+<div id="BOTONES" class="container" >
+    <h4>Seleccione formato</h4>
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"> --Formato-- <span class="caret">
+  </span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Microsoft Word (.docx)</a></li>
+    <li><a href="#">Documento (.pdf)</a></li>
+    <li><a href="#">Texto sin formato(txt)</a></li>
+  </ul>
 
-      </div>
-    </center>
-</div>  
-<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>             
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
+    <br>
+
+</div>
+</div>
+</div>
+<div>
+  <img id="graf" src="..\imagenes\grafico2.png" class="media-object" style="width:40%"  >
+</div>
+</div>
+<div id="div4" class="jumbotron" id="volver">
+            <div align="center">
+              <input type="button"class="btn btn-primary"  value="GENERAR" >
+              <input type="button"class="btn btn-primary"  value="IMPRIMIR" id="imprimir">
+              <input type="button"class="btn btn-primary"  value="VOLVER ATRÁS" onclick="history.back()"  >
+
+            </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </body>
 </html>
