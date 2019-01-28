@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Stock</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="..\css\stock.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script type="text/javascript" src="..\js\busqueda.js"></script>
+    
+
+</head>
+
+<body ng-controller="busqueda" >
+    <div id="div2" class="jumbotron" >
+    <div class="media-left">
+        <img src="..\imagenes\user.png" class="media-object" style="width:95%">
+        <br>
+        <input type="button"class="btn btn-primary"  value="Cerrar Sesión" name="Back2" onclick="history.back()" />
+    </div>
+    <div id="div1" class="media-body">
+            <h4 class="media-heading">Nombre: Claudio Hermosilla</h5>
+            <h4 class="media-heading">ID: 19.583.197-1</h5>
+            <h4 class="media-heading">Rol: Administrador</h5>
+            <h4 class="media-heading">Sucursal: Providencia</h5>
+           
+    </div>
+    <div class="media-right">
+            <h1>Stock</h1>
+            
+        
+    </div>
+    </div>
+    <div class="container-fluid">
+    <div class="row">
+    <div class="col-sm-10" style="background-color: white;">
+    <div class="container">
+
+    <div id="panel" class="panel panel-default">
+    <div class="panel-body"><h4 id="buscar">Busqueda de productos</h4>
+        <br6>
+    <div class="row">
+        <br>
+        <input id="barradebusqueda" ng-model="busqueda" type="text" placeholder="Search..">
+    </div>
+    <br>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <th> Marca </th>
+            <th> Modelo </th>
+            <th> Codigo</th>
+            <th> Categoria</th>
+            <th> Precio</th>
+            <th> Stock</th>
+
+        </thead>
+        <tbody id="myTable">
+            <tr ng-repeat="product in stock | filter:busqueda">
+                <td> {{product.marca}} </td>
+                <td>{{product.modelo}} </td>
+                <td> {{product.codigo}} </td>
+                <td> {{product.categoria}}</td>
+                <td> {{product.precio}}</td>
+                <td> {{product.stock}}</td>
+            </tr>
+        </tbody>
+          
+    </table>
+    </div>
+    </div>
+    </div>
+    </div>
+<div class="col-sm-2" style="background-color: white;">
+<div class="container" id="cajita">
+    <button id="botoncarga" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">.
+    <img id="imgcargarproducto" src="..\imagenes\cargarproductos.png">
+    <br>
+    Cargar Productos</button>
+<div class="modal fade" id="myModal" role="dialog">
+<div class="modal-dialog modal-sm">
+<div class="modal-content">
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <h4 class="modal-title">CARGAR PRODUCTOS</h4>
+</div>
+
+<div class="modal-body">
+    <h4 id="excel">Cargar archivo formato <b>Excel</b>.</h4>
+    <br>
+    <input id="inputfile" type="file">
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Enviar</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-12" style="background-color: white;">
+        <div id="div4" class="jumbotron" id="volver">
+        <div align="center">
+          <input type="button"class="btn btn-primary"  value="VOLVER ATRÁS" name="Back2" onclick="history.back()" />
+        </div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+
+
+</body>
+</html>
