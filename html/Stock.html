@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-stock="stock1">
 <head>
     <title>Stock</title>
     <meta charset="utf-8">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
-<body>
+<body ng-importar="importar1">
     <div id="div2" class="jumbotron" >
     <div class="media-left">
         <img src="..\imagenes\user.png" class="media-object" style="width:90px">
@@ -98,11 +98,11 @@
 <div class="modal-body">
     <h4 id="excel">Cargar archivo formato <b>Excel</b>.</h4>
     <br>
-    <input id="inputfile" type="file">
+    <input id="inputfile" type="text" ng-model="informacion">
 </div>
 
 <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal">Enviar</button>
+    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="enviar()">Enviar</button>
 </div>
 </div>
 </div>

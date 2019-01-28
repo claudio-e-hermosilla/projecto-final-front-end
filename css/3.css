@@ -1,24 +1,28 @@
 #div2{
     padding: 2%;
    background-color: rgb(175, 183, 255);
-   margin-block-end: 0%
 }
 #div1{
     color: black
 }
 #divRep{
-    padding: 6%;
-    margin-inline-start: 2.5%;
-    
+    padding: 1%
 }
 #BOTONES{
     padding: 3%
 }
+#fecha{
+    margin-inline-start: 20%;
+    margin-top: 1%;
+}
+#graf {
+    margin-top: -43%;
+    margin-left:50%;
+    margin-bottom: 85;
+}
 #div4{
-    background-color: white;
     padding: 2%
 }
-#imgGrafico{
-    padding: 5%;
-    align-content: left;
+#divPanelBody{
+    padding: 6%
 }

@@ -1,7 +1,3 @@
-//function verificar()
-//
-//    if()
-//
 var app = angular.module("app1",[])
 app.controller("controlador1",function($scope,$http,$sce)
 {
