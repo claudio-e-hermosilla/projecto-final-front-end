@@ -10,14 +10,17 @@
 }
 #BOTONES{
     padding: 3%;
+    margin-top: -09%;
+    margin-left: -01%
 }
 #fecha{
-    margin-inline-start: 20%;
+    margin-inline-start: 28%;
+    margin-top: -02%
 }
 #graf {
-    margin-top: -45%;
+    margin-top: -28%;
     margin-left:50%;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 }
 #div4{
     padding: 2%
@@ -25,3 +28,8 @@
 #divPanelBody{
     padding: 6%
 }
+
+#BOTONES1{
+    margin-top: -01%
+}
+
