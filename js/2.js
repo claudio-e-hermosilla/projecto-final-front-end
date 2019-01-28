@@ -1,8 +1,45 @@
-function multiplicar() 
+var app = angular.module('ventas',[])
+app.controller("controlador2",function($scope,$http,$sce){
+    
+    $scope.trustScr = function(src)
     {
-        var m1 = document.getElementById('cantidad1').innerHTML;
-        var m2 = document.getElementById('valor1').innerHTML;
-        var total = 0;
-        total = parseInt(m1)*parseInt(m2);
-        document.getElementById('total1').innerHTML=total;
+        return $sce.trustAsResourceUrl(src);
     }
+    var header_config =
+    {
+        headers:
+        {
+            'Content-Type' : 'application/json'
+        }
+    };
+
+    $scope.borrar=function(){
+        $(document).on('click', '.borrar', function (event) {
+            event.preventDefault();
+            $(this).closest('tr').remove();
+        });
+
+    };
+
+    $scope.agregar=function(){
+
+        var producto =
+            ({
+                nombre:$scope.agregarProducto
+            });
+    console.log("veamos");
+
+    $http({
+        method: 'POST',
+        url:"http://localhost:8080/venta/buscarProducto",
+        data: form_data
+    })  .then(function(respuesta){
+        console.log(respuesta.data);
+    }, function(error){
+        console.log(error);
+    });
+};
+
+    });
+
+ 
