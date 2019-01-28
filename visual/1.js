@@ -1,6 +1,14 @@
+<<<<<<< HEAD
+
+//PROBAR SI FUNCIONA, SI NO HAY QUE BORRAR LO DE ARRIBA Y PROBAR OTRA VEZ
+var app = angular.module('Login',[]);
+app.controller('controlador2',function($scope,$http,$sce)
+{
+=======
 var app = angular.module('LoginApp',[]);
 app.controller('ctrlLogin',function($scope,$http,$window,$sce)
 {    
+>>>>>>> b2437bec8924c3489c586644037d3bb343120c3b
     $scope.trustScr = function(src)
     {
         return $sce.trustAsResourceUrl(src);
